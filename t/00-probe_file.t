@@ -2,19 +2,21 @@
 
 use common::sense;
 use Test::More tests => 8;
+use File::Spec::Functions;
+use File::Basename 'dirname';
 
 use FFprobe;
 
-ok( !defined FFprobe->probe_file("./invalid/path"), "non-existant file" );
-ok( !defined FFprobe->probe_file("./t/test.t"), "non-multimedia file" );
+ok !defined FFprobe->probe_file(__FILE__ . "/i-dont-exist"), "invalid path";
+ok !defined FFprobe->probe_file(__FILE__), "non-multimedia file";
 
-my $probe = FFprobe->probe_file("t/test.ogg");
+my $probe = FFprobe->probe_file(catfile(dirname(__FILE__), 'test.ogg'));
 
-ok( defined $probe and ref $probe eq 'HASH', "multimedia file" ) ||
+ok defined $probe && ref $probe eq 'HASH', "multimedia file" or
     BAIL_OUT("Could not probe t/test.ogg");
 
-is( $$probe{format}{nb_streams}, 1, "number of streams" );
-is( $$probe{format}{format_name}, 'ogg', "format name" );
-is( scalar @{$$probe{stream}}, $$probe{format}{nb_streams}, "stream array size" );
-is( $$probe{stream}[0]{codec_type}, 'audio', "stream codec type" );
-is( $$probe{stream}[0]{codec_name}, 'vorbis', "stream codec name" );
+is $$probe{format}{nb_streams}, 1, "number of streams";
+is $$probe{format}{format_name}, 'ogg', "format name";
+is scalar @{$$probe{stream}}, $$probe{format}{nb_streams}, "stream array size";
+is $$probe{stream}[0]{codec_type}, 'audio', "stream codec type";
+is $$probe{stream}[0]{codec_name}, 'vorbis', "stream codec name";
