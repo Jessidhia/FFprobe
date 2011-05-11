@@ -1,0 +1,26 @@
+---
+abstract: "probes information from multimedia files using 'ffprobe'"
+author:
+  - unknown
+build_requires: {}
+configure_requires:
+  Module::Build: 0.38
+dynamic_config: 1
+generated_by: 'Module::Build version 0.38, CPAN::Meta::Converter version 2.110930'
+license: bsd
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: FFprobe
+provides:
+  FFprobe:
+    file: lib/FFprobe.pm
+    version: v0.0.1
+requires:
+  Carp: 0
+  common::sense: 0
+  perl: v5.10.0
+  version: 0.77
+resources:
+  license: http://www.opensource.org/licenses/bsd-license.php
+version: v0.0.1

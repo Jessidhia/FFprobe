@@ -1,0 +1,44 @@
+{
+   "abstract" : "probes information from multimedia files using 'ffprobe'",
+   "author" : [
+      "unknown"
+   ],
+   "dynamic_config" : 1,
+   "generated_by" : "Module::Build version 0.38, CPAN::Meta::Converter version 2.110930",
+   "license" : [
+      "bsd"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "FFprobe",
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "Module::Build" : "0.38"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Carp" : 0,
+            "common::sense" : 0,
+            "perl" : "v5.10.0",
+            "version" : "0.77"
+         }
+      }
+   },
+   "provides" : {
+      "FFprobe" : {
+         "file" : "lib/FFprobe.pm",
+         "version" : "v0.0.1"
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "license" : [
+         "http://www.opensource.org/licenses/bsd-license.php"
+      ]
+   },
+   "version" : "v0.0.1"
+}
