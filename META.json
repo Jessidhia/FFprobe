@@ -1,5 +1,5 @@
 {
-   "abstract" : "probes information from multimedia files using 'ffprobe'",
+   "abstract" : "probes information from multimedia files using C<ffprobe>",
    "author" : [
       "Diogo Franco (Kovensky) <diogomfranco@gmail.com>"
    ],
@@ -32,7 +32,7 @@
    "provides" : {
       "FFprobe" : {
          "file" : "lib/FFprobe.pm",
-         "version" : "v0.0.1"
+         "version" : "v0.0.2"
       }
    },
    "release_status" : "stable",
@@ -41,5 +41,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "v0.0.1"
+   "version" : "v0.0.2"
 }
