@@ -10,9 +10,20 @@ our $VERSION = qv("v0.0.1");
 
 FFprobe - probes information from multimedia files using C<ffprobe>
 
+=head1 PREREQUISITES
+
+This module requires that the C<ffprobe> program is present and
+accessible through the PATH. It is part of the ffmpeg / libav suite.
+
+=cut
+
+qx{ffprobe -version 2>&1} =~ /libavcodec/ or
+    croak "Could not execute 'ffprobe -version', ".
+          "check whether it is installed and accessible through PATH";
+
 =head1 SYNOPSIS
 
-    use FFprobe;
+    use FFprobe; # may fail if ffprobe isn't present
 
     my $probe = FFprobe->probe_file("/path/to/multimedia/file");
     print $probe->{format}->{format_name};

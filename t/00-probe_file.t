@@ -1,11 +1,11 @@
 #!/usr/bin/env perl
 
 use common::sense;
-use Test::More tests => 8;
+use Test::More tests => 9;
 use File::Spec::Functions;
 use File::Basename 'dirname';
 
-use FFprobe;
+BEGIN { use_ok 'FFprobe' or BAIL_OUT("Could not find the 'ffprobe' binary.") }
 
 ok !defined FFprobe->probe_file(__FILE__ . "/i-dont-exist"), "invalid path";
 ok !defined FFprobe->probe_file(__FILE__), "non-multimedia file";

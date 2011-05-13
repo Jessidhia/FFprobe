@@ -9,6 +9,9 @@ To install this module, run the following commands:
 	./Build test
 	./Build install
 
+This module requires the 'ffprobe' binary from libav or ffmpeg to be
+installed and accessible through PATH. The test suite verifies this.
+	
 SUPPORT AND DOCUMENTATION
 
 After installing, you can find documentation for this module with the
