@@ -5,7 +5,7 @@ use Carp;
 use Encode;
 use version 0.77;
 
-our $VERSION = qv("v0.0.2");
+our $VERSION = qv("v0.0.3");
 
 =head1 NAME
 

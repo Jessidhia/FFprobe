@@ -16,12 +16,13 @@ name: FFprobe
 provides:
   FFprobe:
     file: lib/FFprobe.pm
-    version: v0.0.2
+    version: v0.0.3
 requires:
   Carp: 0
+  Encode: 0
   common::sense: 0
   perl: v5.10.0
   version: 0.77
 resources:
   license: http://dev.perl.org/licenses/
-version: v0.0.2
+version: v0.0.3

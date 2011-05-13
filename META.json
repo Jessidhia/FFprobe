@@ -23,6 +23,7 @@
       "runtime" : {
          "requires" : {
             "Carp" : 0,
+            "Encode" : 0,
             "common::sense" : 0,
             "perl" : "v5.10.0",
             "version" : "0.77"
@@ -32,7 +33,7 @@
    "provides" : {
       "FFprobe" : {
          "file" : "lib/FFprobe.pm",
-         "version" : "v0.0.2"
+         "version" : "v0.0.3"
       }
    },
    "release_status" : "stable",
@@ -41,5 +42,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "v0.0.2"
+   "version" : "v0.0.3"
 }
