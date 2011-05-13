@@ -18,4 +18,9 @@ my $builder = Module::Build->new(
     }
 );
 
+unless(qx{ffprobe -version 2>&1} =~ /libavcodec/) {
+    say "'ffprobe' (part of ffmpeg/libav) is not present in this system's PATH. Aborting...";
+    exit 0;
+}
+
 $builder->create_build_script;
