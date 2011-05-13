@@ -4,7 +4,7 @@ use common::sense;
 use Carp;
 use version 0.77;
 
-our $VERSION = qv("v0.0.1");
+our $VERSION = qv("v0.0.2");
 
 =head1 NAME
 
