@@ -8,7 +8,7 @@ our $VERSION = qv("v0.0.1");
 
 =head1 NAME
 
-FFprobe - probes information from multimedia files using 'ffprobe'
+FFprobe - probes information from multimedia files using C<ffprobe>
 
 =head1 SYNOPSIS
 
@@ -25,7 +25,7 @@ FFprobe - probes information from multimedia files using 'ffprobe'
  use FFprobe;
  my $probe = FFprobe->probe_file("/path/to/file");
 
-Runs 'ffprobe -show_format -show_streams' on the filename given as
+Runs C<ffprobe -show_format -show_streams> on the filename given as
 argument. Returns a hashref with a structured form parsed from
 ffprobe's output. Sample output:
 
@@ -46,7 +46,7 @@ ffprobe's output. Sample output:
         ]
     };
 
-The "index" entry may not exist if there is only one stream.
+The C<index> entry may not exist if there is only one stream.
 
 =cut
 
@@ -91,7 +91,7 @@ sub probe_file($$) {
 
 =head1 AUTHOR
 
-Kovensky, C<< <diogomfranco at gmail.com> >>
+Diogo Franco (Kovensky) C<< <diogomfranco at gmail.com> >>
 
 =head1 LICENSE AND COPYRIGHT
 
