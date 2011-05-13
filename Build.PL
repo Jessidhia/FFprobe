@@ -14,6 +14,7 @@ my $builder = Module::Build->new(
 	'perl' => '5.10.0',
 	'Carp' => 0,
 	'common::sense' => 0,
+	'Encode' => 0,
 	'version' => '0.77',
     }
 );

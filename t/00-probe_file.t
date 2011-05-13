@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 
 use common::sense;
-use Test::More tests => 9;
+use Test::More tests => 10;
 use File::Spec::Functions;
 use File::Basename 'dirname';
 
@@ -20,3 +20,4 @@ is $$probe{format}{format_name}, 'ogg', "format name";
 is scalar @{$$probe{stream}}, $$probe{format}{nb_streams}, "stream array size";
 is $$probe{stream}[0]{codec_type}, 'audio', "stream codec type";
 is $$probe{stream}[0]{codec_name}, 'vorbis', "stream codec name";
+is $$probe{stream}[0]{'TAG:TEST'}, 'テスト', "unicode tags";
